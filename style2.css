@@ -45,14 +45,13 @@ h1 {
 }
 
 #block1 {
-    background-color:rgb(81, 78, 108);
-    overflow-wrap: break-word;
+    background-color:cadetblue;
+    
     height: 600px;
     margin-bottom: auto;
     width: 20%;
     margin-top: -10px;
     font-size: 2vw;
-    
     
 }
 
@@ -61,7 +60,7 @@ h1 {
 
 
 #block2 {
-    background-color: rgb(121, 153, 125);
+    background-color:hwb(27 49% 0%);
     height: 50px;
     width: 80%;
     margin-left: 21%;
@@ -71,21 +70,19 @@ h1 {
 
 
 #block3 {
-    background-color:rgb(176, 138, 102);
+    background-color:antiquewhite;
     margin-top: auto;
     width: 20%;
     height: 535px;
     margin-left: auto;
     margin-bottom: auto;
     font-size: 2vw;
-    text-align: left;
-
 }
 
 
 
 #block4 {
-    background-color:rgb(140, 182, 194);
+    background-color:khaki;
     height:11%;
     width:58%;
     margin-top: 1px;
@@ -97,23 +94,16 @@ h1 {
 }
 
 #block5 {
-    background-color:rgb(182, 135, 163);
-    height:45%;
+    background-color:paleturquoise;
+    height:28%;
     width:58%;
-    margin-top: -535px;
+    margin-top: -534px;
     margin-left:auto;
     margin-right: auto;
     justify-content: center;
     align-items: center;
     font-size: 2vw;
-    padding-top: 50px;
-}
-
-#block5 img {
-    width: 300px; /* Изображение занимает 100% ширины блока */
-    height: auto; /* Высота подстраивается пропорционально */
-    display: block; /* Убираем пробелы снизу изображения */
-    margin: auto;
+    padding-top: 180px;
 }
 
 #shapka {
@@ -135,3 +125,7 @@ h1 {
     font-size: 35px;
     color:crimson;
 }
+
+
+
+

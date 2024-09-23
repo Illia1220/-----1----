@@ -45,14 +45,13 @@ h1 {
 }
 
 #block1 {
-    background-color:rgb(81, 78, 108);
-    overflow-wrap: break-word;
-    height: 600px;
+    background-color:rgb(157, 181, 163);
+    
+    height: 599px;
     margin-bottom: auto;
     width: 20%;
     margin-top: -10px;
     font-size: 2vw;
-    
     
 }
 
@@ -61,7 +60,7 @@ h1 {
 
 
 #block2 {
-    background-color: rgb(121, 153, 125);
+    background-color: rgb(62, 182, 182);
     height: 50px;
     width: 80%;
     margin-left: 21%;
@@ -71,34 +70,33 @@ h1 {
 
 
 #block3 {
-    background-color:rgb(176, 138, 102);
+    background-color:rgb(109, 97, 138);
     margin-top: auto;
     width: 20%;
     height: 535px;
     margin-left: auto;
     margin-bottom: auto;
     font-size: 2vw;
-    text-align: left;
-
 }
 
 
 
 #block4 {
-    background-color:rgb(140, 182, 194);
-    height:11%;
+    background-color:rgb(154, 173, 128);
+    height:9%;
     width:58%;
-    margin-top: 1px;
+    margin-top: 25px;
     margin-left:auto;
     margin-right: auto;
     justify-content: center;
     align-items: center;
     font-size: 2vw;
+    padding-top: 20px;
 }
 
 #block5 {
-    background-color:rgb(182, 135, 163);
-    height:45%;
+    background-color:rgb(226, 179, 118);
+    height:47%;
     width:58%;
     margin-top: -535px;
     margin-left:auto;
@@ -106,8 +104,9 @@ h1 {
     justify-content: center;
     align-items: center;
     font-size: 2vw;
-    padding-top: 50px;
+    padding-top: 30px;
 }
+
 
 #block5 img {
     width: 300px; /* Изображение занимает 100% ширины блока */

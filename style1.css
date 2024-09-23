@@ -45,14 +45,14 @@ h1 {
 }
 
 #block1 {
-    background-color:rgb(81, 78, 108);
-    overflow-wrap: break-word;
+    background-color:rgb(161, 108, 102);
+    
     height: 600px;
     margin-bottom: auto;
     width: 20%;
     margin-top: -10px;
     font-size: 2vw;
-    
+    text-align: left;
     
 }
 
@@ -61,34 +61,32 @@ h1 {
 
 
 #block2 {
-    background-color: rgb(121, 153, 125);
+    background-color: rgb(108, 91, 178);
     height: 50px;
     width: 80%;
     margin-left: 21%;
     margin-top: -600px;
-    font-size: 2vw;
+    font-size:2vw;
 }
 
 
 #block3 {
-    background-color:rgb(176, 138, 102);
-    margin-top: auto;
+    background-color:aquamarine;
+    margin-top: 1%;
     width: 20%;
-    height: 535px;
+    height: 525px;
     margin-left: auto;
     margin-bottom: auto;
     font-size: 2vw;
-    text-align: left;
-
 }
 
 
 
 #block4 {
-    background-color:rgb(140, 182, 194);
+    background-color:rgb(88, 132, 87);
     height:11%;
     width:58%;
-    margin-top: 1px;
+    margin-top: -10px;
     margin-left:auto;
     margin-right: auto;
     justify-content: center;
@@ -97,24 +95,17 @@ h1 {
 }
 
 #block5 {
-    background-color:rgb(182, 135, 163);
-    height:45%;
+    background-color:antiquewhite;
+    height:51%;
     width:58%;
-    margin-top: -535px;
+    margin-top: -524px;
     margin-left:auto;
     margin-right: auto;
     justify-content: center;
     align-items: center;
     font-size: 2vw;
-    padding-top: 50px;
 }
 
-#block5 img {
-    width: 300px; /* Изображение занимает 100% ширины блока */
-    height: auto; /* Высота подстраивается пропорционально */
-    display: block; /* Убираем пробелы снизу изображения */
-    margin: auto;
-}
 
 #shapka {
     
