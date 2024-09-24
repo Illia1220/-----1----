@@ -63,10 +63,11 @@ h1 {
 #block2 {
     background-color: rgb(136, 214, 150);
     height: 50px;
-    width: 80%;
+    width: 79%;
     margin-left: 21%;
     margin-top: -600px;
-    font-size: 2vw;
+    font-size:2vw;
+    margin-right: 0;
 }
 
 
