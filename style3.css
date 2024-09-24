@@ -46,11 +46,11 @@ h1 {
 
 #block1 {
     background-color:rgb(157, 181, 163);
-    
+    overflow: auto;
     height: 599px;
     margin-bottom: auto;
     width: 20%;
-    margin-top: -10px;
+    margin-top: 20px;
     font-size: 2vw;
     
 }
