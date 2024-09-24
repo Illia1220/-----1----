@@ -46,12 +46,14 @@ h1 {
 
 #block1 {
     background-color:rgb(61, 129, 255);
-    
+    overflow: auto;
     height: 600px;
     margin-bottom: auto;
     width: 20%;
-    margin-top: -11px;
+    margin-top: 20px;
     font-size: 2vw;
+    overflow: auto;
+
 }
 
 
@@ -70,12 +72,14 @@ h1 {
 
 #block3 {
     background-color:rgb(255, 139, 139);
-    margin-top: auto;
+    margin-top: 20px;
     width: 20%;
     height: 535px;
     margin-left: auto;
     margin-bottom: auto;
     font-size: 2vw;
+    overflow: auto;
+
 }
 
 
@@ -91,6 +95,7 @@ h1 {
     align-items: center;
     font-size: 2vw;
     padding-top: 5px;
+    
 }
 
 #block5 {

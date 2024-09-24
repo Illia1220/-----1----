@@ -46,11 +46,11 @@ h1 {
 
 #block1 {
     background-color:cadetblue;
-    
+    overflow: auto;
     height: 600px;
-    margin-bottom: auto;
+    margin-bottom: 20px;
     width: 20%;
-    margin-top: -10px;
+    margin-top: 20px;
     font-size: 2vw;
     
 }
@@ -62,9 +62,10 @@ h1 {
 #block2 {
     background-color:hwb(27 49% 0%);
     height: 50px;
-    width: 80%;
+    width: auto;
     margin-left: 21%;
-    margin-top: -600px;
+    margin-right: 0;
+    margin-top: -620px;
     font-size: 2vw;
 }
 
@@ -77,6 +78,7 @@ h1 {
     margin-left: auto;
     margin-bottom: auto;
     font-size: 2vw;
+    overflow: auto;
 }
 
 
@@ -97,7 +99,7 @@ h1 {
     background-color:paleturquoise;
     height:28%;
     width:58%;
-    margin-top: -534px;
+    margin-top: -514px;
     margin-left:auto;
     margin-right: auto;
     justify-content: center;
@@ -115,7 +117,7 @@ h1 {
     background-color: #333;
     padding: 0.5px 0 5px;
     font-size: 35px;
-    margin-top: 1%;
+    margin-top: 20px;
     color:crimson;
         
 }
