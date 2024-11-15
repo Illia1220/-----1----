@@ -4,10 +4,16 @@
     box-sizing: border-box;
 }
 
+ol{
+    padding-left: 2vw;
+}
+
+
+
 header {
     background-color: #333;
     padding: 2vw 5vw;
-    font-size: 5vw;
+    font-size: 2vw;
     color: crimson;
     width: 100vw;
 }
@@ -44,14 +50,19 @@ nav ul {
 }
 
 #block1 {
-    background-color: rgb(161, 108, 102);
+    background-color: #212121;
+    color:#b00000;
     width: 20vw;
     height: 100vw;
     padding: 10px;
+    font-size: 2.3vw;
+    overflow: auto;
+    text-align: left;
 }
 
 #block2 {
-    background-color: rgb(102, 161, 114);
+    background-color: #212121;
+    color:#b00000;
     width: 80vw;
     height: 10vw;
     display: flex;
@@ -61,14 +72,16 @@ nav ul {
 }
 
 #block3 {
-    background-color: rgb(230, 185, 95);
+    background-color: #212121;
+    color:#b00000;
     width: 60vw;
     height: 90vw; /* Уменьшено для размещения блока 4 */
     position: relative;
 }
 
 #block4 {
-    background-color: antiquewhite;
+    background-color: #212121;
+    color:#b00000;
     width: 100%; /* По ширине блока 3 */
     height: 10vw;
     display: flex;
@@ -77,6 +90,7 @@ nav ul {
     position: absolute;
     bottom: 0; /* Размещаем внизу блока 3 */
     left: 0;
+    font-size: 2vw;
 }
 
 .inner-container {
@@ -86,18 +100,31 @@ nav ul {
 }
 
 #block5 {
-    background-color: lightblue;
+    background-color: #212121;
+    color:#b00000;
     width: 20vw;
     height: 90vw;
     display: flex;
-    align-items: center;
     justify-content: center;
+    font-size: 1.5vw;
+    overflow: auto;
+    text-align: left;
+}
+
+.block img {
+    max-width: 100%; /* Ограничивает ширину изображения пределами блока */
+    height: auto; /* Сохраняет пропорции изображения */
+    display: block; /* Убирает лишние отступы снизу */
+}
+
+a{
+    color:#b00000
 }
 
 footer {
     background-color: #333;
     padding: 2vw 5vw;
-    font-size: 5vw;
+    font-size: 2vw;
     color: crimson;
     width: 100vw;
     text-align: right; /* Перемещает текст вправо */
