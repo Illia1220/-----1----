@@ -1,0 +1,93 @@
+/* Сброс стандартных отступов и добавление box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Стили для заголовка */
+header {
+    background-color: #333;
+    padding: 2vw 5vw;
+    font-size: 2vw;
+    color: crimson;
+    width: 100vw;
+}
+
+/* Удаление лишнего стиля из h1 внутри #shapka */
+#shapka h1 {
+    margin: 0;
+}
+
+/* Общие стили для блоков */
+.block {
+    text-align: center;
+    padding: 20px;
+    background-color: lightgray;
+    border: 1px solid #ccc;
+    font-size: 1.5vw;
+}
+
+#red-container {
+    position: absolute;
+    left: calc(5vw + 14vw);
+    width: 79.9vw;
+    height: 80vw;
+    background-color: red;
+}
+
+/* Желтый контейнер с использованием инлайнового расположения */
+#yellow-container {
+    background-color: yellow;
+    white-space: nowrap; /* Предотвращаем перенос блоков */
+    height: 100%;
+    width: 79vw;
+}
+
+#green-container {
+    display: inline-block; /* Блок ведет себя как встроенно-блочный */
+    background-color: green;
+    width: 74%; /* Задаем ширину для green-container */
+    vertical-align: top; /* Выравниваем элементы по верхнему краю */
+}
+
+#block1 {
+    position: absolute;
+    width: 19vw;
+    height: 100vw;
+    background-color: lightblue;
+}
+
+#block2 {
+    width: 81vw;
+    height: 10vw;
+}
+
+#block3 {
+    width: 60vw;
+    height: 80vw;
+}
+
+#block4 {
+    width: 60vw;
+    height: 10vw;
+}
+
+#block5 {
+    display: inline-block; /* Блок ведет себя как встроенно-блочный */
+    width: 22vw; /* Ширина относительно родителя */
+    height: 90vw;
+    background-color: lightcoral;
+    vertical-align: top; /* Выравниваем элементы по верхнему краю */
+}
+
+footer {
+    background-color: #333;
+    padding: 2vw 5vw;
+    font-size: 2vw;
+    color: crimson;
+    width: 100vw;
+    text-align: right;
+    position: relative; /* Относительное позиционирование, чтобы следовать за всем контентом */
+    margin-top: 100vw; /* Расстояние от последнего блока */
+}
