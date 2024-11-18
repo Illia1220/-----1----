@@ -1,0 +1,157 @@
+/* Сброс отступов и box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Стили для заголовка */
+header {
+    background-color: #333;
+    padding: 2vw 5vw;
+    font-size: 2vw;
+    color: crimson;
+    width: 100vw;
+}
+
+
+ol{
+    padding-left: 2vw;
+}
+
+li1 {
+    margin-right: 1.5vw;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 2vw;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0;
+}
+
+.block img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a{
+    color:crimson
+}
+
+/* Общие стили для блоков */
+.block {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Основная сетка страницы */
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* Заголовок, основной контент, подвал */
+    grid-template-columns: 1fr;
+    height: 100vh; /* Заполнение по высоте окна */
+    background-color: #272727;
+}
+
+#red-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Три колонки одинаковой ширины */
+    grid-template-rows: auto auto auto; /* Три строки: блок2, блоки 3 и 5 */
+    height: auto; /* Высота контейнера зависит от содержимого */
+    width: 100vw;
+}
+
+/* Блок1 (зеленый) */
+#block1 {
+    grid-column: 1; /* Первый столбец */
+    grid-row: 1 / span 3; /* Занимает три строки */
+    padding: 10px;
+    text-align: center;
+    height: 100vw; /* Занимает всю высоту строки */
+    width: 20vw;
+    font-size: 2.3vw;
+    overflow: auto;
+    text-align: left;
+    background-color: #272727;
+    color: crimson;
+
+}
+
+/* Блок2 (синий) */
+#block2 {
+    grid-column: 2 / span 2; /* Занимает второй и третий столбцы */
+    grid-row: 1; /* Первый ряд */
+    padding: 10px;
+    text-align: center;
+    height: 10vw;
+    width:80vw;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vw;
+    background-color: #272727;
+    color: crimson;
+}
+
+/* Блок3 (оранжевый) */
+#block3 {
+    grid-column: 2; /* Второй столбец */
+    grid-row: 2; /* Второй ряд */
+    padding: 10px;
+    text-align: center;
+    height: 80vw;
+    width:60vw;
+    position: relative;
+    background-color: #272727;
+    color: crimson;
+    overflow: hidden; /* Обрезка содержимого */
+}
+
+/* Блок5 (красный) */
+#block5 {
+    background-color: red;
+    color: white;
+    grid-column: 3; /* Третий столбец */
+    grid-row: 2 / span 3; /* Второй ряд */
+    padding: 10px;
+    text-align: center;
+    width: 20vw;
+    height: 90vw;
+    text-align: left;
+    word-wrap: break-word; /* Разрыв слов при необходимости */
+    overflow: auto;
+    background-color: #272727;
+    color: crimson;
+    font-size: 2vw;
+    padding-left: 2vw;
+}
+
+/* Блок4 (фиолетовый) */
+#block4 {
+    background-color: #272727;
+    color: crimson;
+    grid-column: 2; /* Второй и третий столбцы */
+    grid-row: 3; /* Третий ряд */
+    padding: 10px;
+    text-align: center;
+    height: 10vw;
+    width:60vw;
+    align-items: center;
+    justify-content: center;
+    font-size: 2vw;
+}
+
+
+footer {
+    background-color: #333;
+    padding: 2vw 5vw;
+    font-size: 2vw;
+    color: crimson;
+    width: 100vw;
+    text-align: right;
+}

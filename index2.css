@@ -23,62 +23,121 @@ header {
 .block {
     text-align: center;
     padding: 20px;
-    background-color: lightgray;
-    border: 1px solid #ccc;
+    /* background-color: lightgray;
+    border: 1px solid #ccc; */
     font-size: 1.5vw;
 }
 
 #red-container {
     position: absolute;
-    left: calc(5vw + 14vw);
-    width: 79.9vw;
-    height: 80vw;
-    background-color: red;
+    left: calc(5vw + 15vw);
+    width: 80vw;
+    height: 100vw;
+    background-color: #272727;
 }
 
 /* Желтый контейнер с использованием инлайнового расположения */
 #yellow-container {
-    background-color: yellow;
+    background-color: #272727;
     white-space: nowrap; /* Предотвращаем перенос блоков */
-    height: 100%;
-    width: 79vw;
+    height: 80vw;
+    width: 80vw;
 }
 
 #green-container {
     display: inline-block; /* Блок ведет себя как встроенно-блочный */
-    background-color: green;
-    width: 74%; /* Задаем ширину для green-container */
+    background-color: #272727;
+    width: 60vw; /* Задаем ширину для green-container */
     vertical-align: top; /* Выравниваем элементы по верхнему краю */
 }
 
 #block1 {
+    background-color: #272727;
+    color: crimson;
     position: absolute;
-    width: 19vw;
+    width: 20vw;
     height: 100vw;
-    background-color: lightblue;
+    font-size: 2.3vw;
+    overflow: auto;
+    text-align: left;
+    border: 1px solid black;
 }
 
 #block2 {
-    width: 81vw;
+    background-color: #272727;
+    color: crimson;
+    width: 80vw;
     height: 10vw;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vw;
+    border: 1px solid black;
 }
 
 #block3 {
+    background-color: #272727;
+    color: crimson;
     width: 60vw;
     height: 80vw;
+    position: relative;
+    border: 1px solid black;
 }
 
 #block4 {
+    background-color: #272727;
+    color: crimson;
     width: 60vw;
     height: 10vw;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 2vw;
+    border: 1px solid black;
 }
 
 #block5 {
-    display: inline-block; /* Блок ведет себя как встроенно-блочный */
-    width: 22vw; /* Ширина относительно родителя */
+    background-color: #272727;
+    color: crimson;
+    display: inline-block;
+    width: 20vw;
     height: 90vw;
-    background-color: lightcoral;
-    vertical-align: top; /* Выравниваем элементы по верхнему краю */
+    vertical-align: top;
+    text-align: left;
+    word-wrap: break-word; /* Разрыв слов при необходимости */
+    overflow: auto; /* Скрывает текст, выходящий за границы блока */
+    text-overflow: ellipsis; /* Добавляет многоточие для обрезанного текста */
+    white-space: normal; /* Перенос строк, чтобы текст оставался в пределах блока */
+}
+
+
+ol{
+    padding-left: 2vw;
+}
+
+li1 {
+    margin-right: 1.5vw;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 2vw;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0;
+}
+
+.block img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a{
+    color:crimson
 }
 
 footer {
@@ -88,6 +147,6 @@ footer {
     color: crimson;
     width: 100vw;
     text-align: right;
-    position: relative; /* Относительное позиционирование, чтобы следовать за всем контентом */
-    margin-top: 100vw; /* Расстояние от последнего блока */
+    position: relative; 
+    margin-top: 100vw;
 }
