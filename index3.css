@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 /* Стили для заголовка */
@@ -16,7 +17,7 @@ header {
 
 
 ol{
-    padding-left: 2vw;
+    padding-left: 1vw;
 }
 
 li1 {
@@ -55,7 +56,7 @@ body {
     display: grid;
     grid-template-rows: auto 1fr auto; /* Заголовок, основной контент, подвал */
     grid-template-columns: 1fr;
-    height: 100vh; /* Заполнение по высоте окна */
+    height: 100vw; /* Заполнение по высоте окна */
     background-color: #272727;
 }
 
