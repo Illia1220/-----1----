@@ -17,7 +17,7 @@ header {
     padding: 2vw 5vw;
     font-size: 2vw;
     color: crimson;
-    width: 100vw;
+    width: 99vw;
 }
 
 .block {
@@ -128,6 +128,6 @@ footer {
     padding: 2vw 5vw;
     font-size: 2vw;
     color: crimson;
-    width: 100vw;
+    width: 99vw;
     text-align: right;
 }
