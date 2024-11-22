@@ -11,7 +11,7 @@ header {
     padding: 2vw 5vw;
     font-size: 2vw;
     color: crimson;
-    width: 100vw;
+    width: 98.9vw;
 }
 
 /* Удаление лишнего стиля из h1 внутри #shapka */
@@ -30,7 +30,7 @@ header {
 
 #red-container {
     position: absolute;
-    left: calc(5vw + 15vw);
+    left: calc(5vw + 13.9vw);
     width: 80vw;
     height: 100vw;
     background-color: #272727;
@@ -47,7 +47,7 @@ header {
 #green-container {
     display: inline-block; /* Блок ведет себя как встроенно-блочный */
     background-color: #272727;
-    width: 60vw; /* Задаем ширину для green-container */
+    width: 60.7vw; /* Задаем ширину для green-container */
     vertical-align: top; /* Выравниваем элементы по верхнему краю */
 }
 
@@ -55,7 +55,7 @@ header {
     background-color: #272727;
     color: crimson;
     position: absolute;
-    width: 20vw;
+    width: 18.9vw;
     height: 100vw;
     font-size: 2.3vw;
     overflow: auto;
@@ -145,7 +145,7 @@ footer {
     padding: 2vw 5vw;
     font-size: 2vw;
     color: crimson;
-    width: 100vw;
+    width: 98.9vw;
     text-align: right;
     position: relative; 
     margin-top: 100vw;

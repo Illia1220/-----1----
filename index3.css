@@ -12,7 +12,7 @@ header {
     padding: 2vw 5vw;
     font-size: 2vw;
     color: crimson;
-    width: 100vw;
+    width: 98.9vw;
 }
 
 
@@ -65,7 +65,7 @@ body {
     grid-template-columns: 1fr 1fr 1fr; /* Три колонки одинаковой ширины */
     grid-template-rows: auto auto auto; /* Три строки: блок2, блоки 3 и 5 */
     height: auto; /* Высота контейнера зависит от содержимого */
-    width: 100vw;
+    width: 98.9vw;
 }
 
 /* Блок1 (зеленый) */
@@ -91,7 +91,7 @@ body {
     padding: 10px;
     text-align: center;
     height: 10vw;
-    width:80vw;
+    width:78.9vw;
     justify-content: center;
     align-items: center;
     font-size: 2vw;
@@ -121,7 +121,7 @@ body {
     grid-row: 2 / span 3; /* Второй ряд */
     padding: 10px;
     text-align: center;
-    width: 20vw;
+    width: 18.9vw;
     height: 90vw;
     text-align: left;
     word-wrap: break-word; /* Разрыв слов при необходимости */
@@ -153,6 +153,6 @@ footer {
     padding: 2vw 5vw;
     font-size: 2vw;
     color: crimson;
-    width: 100vw;
+    width: 98.9vw;
     text-align: right;
 }
