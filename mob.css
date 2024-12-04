@@ -1,0 +1,73 @@
+/* Общие стили остаются */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ol {
+    padding-left: 2vw;
+}
+
+li1 {
+    margin-right: 1.5vw;
+}
+
+header, footer {
+    background-color: #333;
+    padding: 2vw 5vw;
+    font-size: 2vw;
+    color: crimson;
+    width: 100%;
+    text-align: center;
+}
+
+.block {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Стили для мобильной версии */
+@media (max-width: 768px) {
+    .main-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #block1, #block2, #block3, #block5 {
+        width: 100%;
+        height: auto; /* Позволяет высоте подстраиваться под содержимое */
+        padding: 10px;
+    }
+
+    .right-container {
+        width: 100%;
+    }
+
+    nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1vw;
+    }
+
+    nav ul li1 {
+        margin-right: 0;
+    }
+
+    #block3 img {
+        width: 100%; /* Делает изображение адаптивным */
+        height: auto;
+    }
+
+    #block4 {
+        position: static;
+        height: auto;
+        padding: 10px;
+    }
+
+    #block5 {
+        overflow: visible;
+    }
+}
