@@ -1,4 +1,4 @@
-/* Общие стили остаются */
+/* Общие стили */
 * {
     margin: 0;
     padding: 0;
@@ -26,9 +26,11 @@ header, footer {
     border: 1px solid black;
     padding: 10px;
     text-align: center;
+    color: crimson;
+    background-color: #333;
 }
 
-/* Стили для мобильной версии */
+/* Адаптивные стили */
 @media (max-width: 768px) {
     .main-container {
         display: flex;
@@ -37,7 +39,7 @@ header, footer {
 
     #block1, #block2, #block3, #block5 {
         width: 100%;
-        height: auto; /* Позволяет высоте подстраиваться под содержимое */
+        height: auto;
         padding: 10px;
     }
 
@@ -56,9 +58,15 @@ header, footer {
         margin-right: 0;
     }
 
+    /* Изображение в рамках блока */
+    #block3 {
+        overflow: hidden; /* Скрывает части, выходящие за пределы блока */
+    }
+
     #block3 img {
-        width: 100%; /* Делает изображение адаптивным */
-        height: auto;
+        max-width: 100%; /* Изображение не превышает ширину блока */
+        height: auto; /* Сохраняет пропорции */
+        display: block; /* Убирает лишние отступы */
     }
 
     #block4 {
@@ -68,6 +76,6 @@ header, footer {
     }
 
     #block5 {
-        overflow: visible;
+        overflow: auto;
     }
 }
