@@ -65,7 +65,7 @@ body {
 }
 
 .services h1 {
-    font-size: 3vw;
+    font-size: 60px;
     color: #4a90e2;
 }
 
@@ -132,7 +132,7 @@ button:active {
     background-color: #3a3a3a; /* Темно-синій фон */
     color: white;
     padding: 20px 0;
-    font-size: 1vw;
+    font-size: 10px;
     text-align: center;
     margin-top: 5%;
 }
