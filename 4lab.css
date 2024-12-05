@@ -81,6 +81,14 @@ body {
     vertical-align: top; /* Выравнивание блоков по верхнему краю */
 }
 
+@media (max-width: 768px) {
+    .service-item {
+        width: 90%; /* Блоки займають майже всю ширину екрана */
+        margin: 10px auto; /* Вирівнювання по центру */
+        display: block; /* Кожен блок на окремому рядку */
+    }
+}
+
 .service-item img {
     max-width: 100%;
     height: 13vw; /* Ограничили высоту изображения */
