@@ -4,7 +4,7 @@ function swapBlocks() {
     const block5 = document.getElementById("block5");
 
     // Сохраняем содержимое блоков
-    const block2Content = block1.innerHTML;
+    const block1Content = block1.innerHTML;
     const block5Content = block5.innerHTML;
 
     // Меняем содержимое местами

@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Drive Hub</title>
-        <link rel="stylesheet" href="mob2.css"> <!-- Подключаем CSS файл -->
+        <link rel="stylesheet" href="mob2copy.css"> <!-- Подключаем CSS файл -->
     </head>
 <body>
     <header>
@@ -22,29 +22,30 @@
         <div class="right-container">
             
             <div id="block2" class="block">
-                <nav>
-                    <ul>
-                        <li1><a href="index.html"><h3>Main</h3></a></li1>
-                        <li1><a href="Supra.html"><h3>Toyota Supra</h3></a></li1>
-                        <li1><a href="Skyline.html"><h3>Nissan Skyline</h3></a></li1>
-                        <li1><a href="Civic.html"><h3>Honda Civic</h3></a></li1>
-                        <li1><a href="BMW.html"><h3>BMW M8</h3></a></li1>
-                        <li1><a href="index2.html"><h3>Absolute</h3></a></li1>
-                        <li1><a href="index3.html"><h3>Grid</h3></a></li1>
-                        <li1><a href="mob2copy.html"><h3>1copy</h3></a></li1>
-                        <li1><a href="mob2copy2.html"><h3>2copy</h3></a></li1>
-                        <li1><a href="mob2.html"><h3>mob</h3></a></li1>
-                    </ul>
-                </nav>
+                <!-- Контейнер для динамічного меню -->
+                <form id="menuForm">
+                    <label for="menuTitle">Назва меню:</label>
+                    <input type="text" id="menuTitle" placeholder="Введіть назву" required>
+                    <br>
+                    <label for="submenuItems">Пункти підменю (через кому):</label>
+                    <input type="text" id="submenuItems" placeholder="Пункт 1, Пункт 2" required>
+                    <br>
+                    <label for="links">Посилання (через кому):</label>
+                    <input type="text" id="links" placeholder="http://link1.com, http://link2.com" required>
+                    <br>
+                    <button type="submit">Додати меню</button>
+                </form>
+                
             </div>
             <div class="content-container">
                 <div class="inner-container">
                     <div id="block3" class="block">
-                        <img src="https://images.pexels.com/photos/5214413/pexels-photo-5214413.jpeg?cs=srgb&dl=pexels-introspectivedsgn-5214413.jpg&fm=jpg" usemap="#image-map">
                         
-                            <map name="image-map">
-                                <area shape="rect" coords="0,0,10000,10000" href="https://auto.ria.com/">
-                            </map>
+
+                        <nav>
+                            <ul class="menu" id="dynamicMenu"></ul>
+                        </nav>
+
                         <div id="block4" class="block">
                             <p>
                                 <form id="numberForm">
@@ -56,6 +57,12 @@
                                     <input type="color" id="borderColorInput">
                                     <button id="applyColorButton">Применить цвет</button>
                                 </form>
+
+
+
+                                <nav>
+                                    <ul class="menu" id="dynamicMenu"></ul>
+                                </nav>
                             </p>
                         </div>
                     </div>
@@ -79,7 +86,7 @@
             <h1>Drive Hub</h1>
          </p>
     </footer>
-    <script src="mob2.js"></script>
+    <script src="mob2copy.js"></script>
     
 
 
