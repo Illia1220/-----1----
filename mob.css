@@ -30,6 +30,12 @@ header, footer {
     background-color: #333;
 }
 
+.block img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
 /* Адаптивные стили */
 @media (max-width: 768px) {
     .main-container {
