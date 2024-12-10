@@ -10,6 +10,8 @@
     gap: 10px;
 }
 
+
+
 .form-row {
     display: flex;
     flex-wrap: wrap;
@@ -162,48 +164,36 @@ footer {
 @media (max-width: 768px) {
     .main-container {
         display: flex;
-        flex-direction: column;
+        flex-direction: column; /* Строим элементы по вертикали */
+        gap: 10px; /* Расстояние между блоками */
     }
 
     #block1, #block2, #block3, #block5 {
-        width: 100%;
-        height: auto;
-        padding: 10px;
+        width: 100%; /* Каждый блок занимает всю ширину */
+        height: auto; /* Высота подстраивается автоматически */
+        margin-bottom: 10px; /* Отступы между блоками */
+    }
+
+    
+
+    #block1{
+        height: 100vw;
     }
 
     .right-container {
+        display: flex;
+        flex-direction: column;
         width: 100%;
     }
 
-    nav ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1vw;
-    }
-
-    nav ul li1 {
-        margin-right: 0;
-    }
-
-    /* Изображение в рамках блока */
-    #block3 {
-        overflow: hidden; /* Скрывает части, выходящие за пределы блока */
-    }
-
-    #block3 img {
-        max-width: 100%; /* Изображение не превышает ширину блока */
-        height: auto; /* Сохраняет пропорции */
-        display: block; /* Убирает лишние отступы */
+    #block3, #block5 {
+        overflow: auto; /* Убираем проблемы с прокруткой */
     }
 
     #block4 {
-        position: static;
-        height: auto;
+        position: static; /* Сбрасываем позиционирование для упрощения адаптации */
+        width: 100%; /* Полная ширина на экране телефона */
         padding: 10px;
-    }
-
-    #block5 {
-        overflow: auto;
+        margin-top: 10px;
     }
 }
