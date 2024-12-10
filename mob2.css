@@ -165,19 +165,19 @@ footer {
     .main-container {
         display: flex;
         flex-direction: column; /* Строим элементы по вертикали */
-        gap: 10px; /* Расстояние между блоками */
+         /* Расстояние между блоками */
     }
 
     #block1, #block2, #block3, #block5 {
         width: 100%; /* Каждый блок занимает всю ширину */
         height: auto; /* Высота подстраивается автоматически */
-        margin-bottom: 10px; /* Отступы между блоками */
+        
     }
 
     
 
     #block1{
-        height: 100vw;
+        height: 150vw;
     }
 
     .right-container {
@@ -194,6 +194,6 @@ footer {
         position: static; /* Сбрасываем позиционирование для упрощения адаптации */
         width: 100%; /* Полная ширина на экране телефона */
         padding: 10px;
-        margin-top: 10px;
+        
     }
 }
