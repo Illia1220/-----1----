@@ -2,9 +2,9 @@ document.getElementById('menuForm').addEventListener('submit', function (e) {
     e.preventDefault();
 
     // Отримуємо значення з форми
-    const menuTitle = document.getElementById('menuTitle').value;
-    const submenuItems = document.getElementById('submenuItems').value.split(',');
-    const links = document.getElementById('links').value.split(',');
+    const menuTitle = document.getElementById('menuTitle').value.trim();
+    const submenuItems = document.getElementById('submenuItems').value.split(',').map(item => item.trim());
+    const links = document.getElementById('links').value.split(',').map(link => link.trim());
 
     // Перевірка на кількість пунктів і посилань
     if (submenuItems.length !== links.length) {
@@ -16,10 +16,12 @@ document.getElementById('menuForm').addEventListener('submit', function (e) {
     const data = {
         title: menuTitle,
         submenu: submenuItems.map((item, index) => ({
-            name: item.trim(),
-            link: links[index].trim()
+            name: item,
+            link: links[index]
         }))
     };
+
+    console.log('Відправка даних на сервер:', data); // Додаємо для дебагу
 
     // Відправка на сервер
     fetch('save_menu.php', {
@@ -29,8 +31,14 @@ document.getElementById('menuForm').addEventListener('submit', function (e) {
         },
         body: JSON.stringify(data)
     })
-    .then(response => response.json())
+    .then(response => {
+        if (!response.ok) { // Перевірка статусу відповіді
+            throw new Error(`HTTP помилка! Статус: ${response.status}`);
+        }
+        return response.json();
+    })
     .then(result => {
+        console.log('Результат з сервера:', result); // Додаємо для дебагу
         if (result.success) {
             alert('Дані успішно збережено!');
         } else {
@@ -38,7 +46,7 @@ document.getElementById('menuForm').addEventListener('submit', function (e) {
         }
     })
     .catch(error => {
-        console.error('Помилка:', error);
-        alert('Виникла помилка!');
+        console.error('Помилка під час виконання запиту:', error);
+        alert('Виникла помилка! Перевірте консоль для деталей.');
     });
 });
