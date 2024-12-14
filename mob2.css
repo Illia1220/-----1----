@@ -7,7 +7,21 @@
     padding: 0;
     box-sizing: border-box;
     background-color: #272727;
+    color: crimson;
 
+}
+
+.pentagon-area{
+    border: 1px solid crimson;
+
+}
+
+#numberInput{
+    border: 1px solid crimson;
+}
+
+#borderColorInput{
+    border: 1px solid crimson;
 }
 
 .dynamic-form {
@@ -16,16 +30,15 @@
     gap: 10px;
 }
 
-
-
-
-
 .form-row {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     gap: 10px;
+
 }
+
+
 
 .form-row label {
     flex: 0 0 auto;
@@ -35,6 +48,9 @@
 .form-row input {
     flex: 1 1 auto;
     min-width: 150px;
+    border: 1px solid crimson;
+
+    
 }
 
 ol{
@@ -52,6 +68,7 @@ header {
     color: crimson;
     width: 98.9vw;
 }
+
 
 .block {
     border: 1px solid black;
@@ -129,6 +146,7 @@ nav ul {
     font-size: 1vw;
     overflow: auto;
     gap: 3vw;
+
 }
 
 .inner-container {
