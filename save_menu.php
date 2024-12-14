@@ -1,21 +1,40 @@
 <?php
-// Отримуємо сирі дані
-$requestPayload = file_get_contents("php://input");
-$data = json_decode($requestPayload, true);
+header("Content-Type: application/json");
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: POST, GET, OPTIONS");
+header("Access-Control-Allow-Headers: Content-Type");
 
-// Перевіряємо, чи всі дані передані
-if (!$data || !isset($data['title']) || !isset($data['submenu'])) {
-    echo json_encode(['success' => false, 'message' => 'Некоректні дані.']);
-    exit;
-}
+// Получаем JSON-данные из запроса
+$data = json_decode(file_get_contents("php://input"), true);
 
-// Генеруємо шлях до файлу
-$filename = "menu_data.json";
+// Проверка корректности данных
+if ($data && isset($data['menuTitle']) && isset($data['submenuItems']) && isset($data['links'])) {
+    try {
+        // Подключение к базе данных SQLite
+        $pdo = new PDO('sqlite:/Users/betpublic/Desktop/-----1----/-----1----/database.db');
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-// Зберігаємо дані в JSON файл
-if (file_put_contents($filename, json_encode($data, JSON_PRETTY_PRINT))) {
-    echo json_encode(['success' => true]);
+        // Создаём таблицу
+        $pdo->exec("CREATE TABLE IF NOT EXISTS menus (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            title TEXT NOT NULL,
+            submenu TEXT NOT NULL,
+            links TEXT NOT NULL
+        )");
+
+        // Вставляем данные
+        $stmt = $pdo->prepare("INSERT INTO menus (title, submenu, links) VALUES (:title, :submenu, :links)");
+        $stmt->execute([
+            'title' => $data['menuTitle'],
+            'submenu' => implode(', ', $data['submenuItems']),
+            'links' => implode(', ', $data['links']),
+        ]);
+
+        echo json_encode(["success" => true, "message" => "Меню успішно збережено!"]);
+    } catch (PDOException $e) {
+        echo json_encode(["success" => false, "message" => "Помилка: " . $e->getMessage()]);
+    }
 } else {
-    echo json_encode(['success' => false, 'message' => 'Помилка збереження.']);
+    echo json_encode(["success" => false, "message" => "Невірні дані!"]);
 }
 ?>

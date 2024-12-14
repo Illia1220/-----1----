@@ -14,6 +14,11 @@
     </header>
     <div class="main-container">
         <div id="block1" class="block">
+            <nav>
+                <li><a href="index.html"><h3>Main</h3></a></li>
+                <li><a href="mob2copy.html"><h3>1copy</h3></a></li>
+                <li><a href="mob2copy2.html"><h3>2copy</h3></a></li>
+            </nav>
             <p>
                 Cars are one of the most significant inventions of the modern era, revolutionizing transportation and shaping societies around the world. Whether used for personal commuting, family travel, or even as a hobby, cars serve as an essential tool in daily life. Here's a general overview of cars, highlighting their importance, evolution, and impact.
             </p>
@@ -25,13 +30,13 @@
                 <!-- Контейнер для динамічного меню -->
                 <form id="menuForm">
                     <label for="menuTitle">Назва меню:</label>
-                    <input type="text" id="menuTitle" placeholder="Введіть назву" required>
+                    <input type="text" id="menuTitle" name="menuTitle" required>
                     <br>
-                    <label for="submenuItems">Пункти підменю (через кому):</label>
-                    <input type="text" id="submenuItems" placeholder="Пункт 1, Пункт 2" required>
+                    <label for="submenuItems">Підменю (через кому):</label>
+                    <input type="text" id="submenuItems" name="submenuItems" required>
                     <br>
                     <label for="links">Посилання (через кому):</label>
-                    <input type="text" id="links" placeholder="http://link1.com, http://link2.com" required>
+                    <input type="text" id="links" name="links" required>
                     <br>
                     <button type="submit">Додати меню</button>
                 </form>
@@ -42,9 +47,7 @@
                     <div id="block3" class="block">
                         
 
-                        <nav>
-                            <ul class="menu" id="dynamicMenu"></ul>
-                        </nav>
+                        <ul id="dynamicMenu"></ul>
 
                         <div id="block4" class="block">
                             <p>
