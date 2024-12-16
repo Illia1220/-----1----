@@ -9,6 +9,7 @@
             #block3 .dropdown {
                 position: relative;
                 display: inline-block;
+                margin-right: 3vw;
             }
 
             #block3 .dropdown-content {
@@ -81,53 +82,72 @@ x                    </ul>
                 <div class="inner-container">
                     <div id="block3" class="block">
                         <h2>Dynamic Dropdown</h2>
-                        <div id="dataContainer" class="dropdown">
-                            <button class="dropbtn">Select Item</button>
-                            <div class="dropdown-content">
-                                <!-- Generated dropdown items will appear here -->
-                            </div>
-                        </div>
+                        <div id="dynamicMenuContainer"></div>
+
                     </div>
+
+                    
                 </div>
             </div>
         </div>
     </div>
+
     <footer>
         <h1 id="shapka">Drive Hub</h1>
     </footer>
     <script>
-        // Function to fetch data from the server
-        async function fetchData() {
+        // Функция для получения данных меню с сервера
+        async function fetchMenuData() {
             try {
-                const response = await fetch('http://localhost:8000/get_data.php'); // Adjust the URL to your PHP endpoint
+                const response = await fetch('http://localhost:8000/get_data.php'); // Путь к PHP-скрипту
                 if (!response.ok) {
                     throw new Error(`HTTP error! Status: ${response.status}`);
                 }
                 const data = await response.json();
-                updateDropdown(data);
+                renderDropdownMenu(data);
             } catch (error) {
-                console.error('Error fetching data:', error);
+                console.error('Error fetching menu data:', error);
             }
         }
 
-        // Function to dynamically update the dropdown content
-        function updateDropdown(data) {
-            const dropdownContent = document.querySelector('#dataContainer .dropdown-content');
-            dropdownContent.innerHTML = ''; // Clear existing content
+        // Функция для создания и отображения дропдаун-меню на странице
+        function renderDropdownMenu(data) {
+            const container = document.getElementById('dynamicMenuContainer');
+            container.innerHTML = ''; // Очищаем контейнер перед добавлением данных
 
-            data.forEach(item => {
-                const link = document.createElement('a');
-                link.href = item.links.split(', ')[0]; // Assuming the first link is the main one
-                link.textContent = item.title;
-                dropdownContent.appendChild(link);
+            data.forEach(menu => {
+                // Создаем контейнер для каждого меню
+                const dropdown = document.createElement('div');
+                dropdown.classList.add('dropdown');
+
+                // Главная кнопка меню
+                const dropbtn = document.createElement('button');
+                dropbtn.classList.add('dropbtn');
+                dropbtn.textContent = menu.title; // Назва меню
+                dropdown.appendChild(dropbtn);
+
+                // Контейнер для подменю
+                const dropdownContent = document.createElement('div');
+                dropdownContent.classList.add('dropdown-content');
+
+                // Добавляем подменю
+                const submenuItems = menu.submenu.split(','); // Разделяем пункты подменю
+                const links = menu.links.split(','); // Разделяем ссылки
+
+                submenuItems.forEach((item, index) => {
+                    const link = document.createElement('a');
+                    link.href = links[index].trim();
+                    link.textContent = item.trim();
+                    dropdownContent.appendChild(link);
+                });
+
+                dropdown.appendChild(dropdownContent); // Добавляем подменю в дропдаун
+                container.appendChild(dropdown); // Добавляем дропдаун в основной контейнер
             });
         }
 
-        // Periodic data fetching every 5 seconds
-        setInterval(fetchData, 5000);
-
-        // Initial data load
-        fetchData();
+        // Загружаем данные при загрузке страницы
+        fetchMenuData();
     </script>
 </body>
 </html>

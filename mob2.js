@@ -174,7 +174,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Формируем поля ввода
             form.innerHTML = `
                 <div class="form-row">
-                    <input type="text" id="cssSelector" placeholder="Елемент (li)" />
+                    <input type="text" id="cssSelector" placeholder="Елемент (block1, li, a и т.д.)" />
                 </div>
                 <div class="form-row">
                     <input type="text" id="cssProperty" placeholder="Властивість (color)" />
@@ -192,14 +192,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const saveButton = form.querySelector('#saveCss');
             const clearButton = form.querySelector('#clearCss');
+            const cssSelectorInput = form.querySelector('#cssSelector');
 
             // Регулярное выражение для проверки корректного значения цвета
             const colorRegex = /^(#([0-9A-Fa-f]{3}){1,2}|rgb(a)?\((\d{1,3}),\s*(\d{1,3}),\s*(\d{1,3})(,\s*(0(\.\d+)?|1))?\))$/;
 
+            // Разрешенные элементы
+            const allowedSelectors = /^(block[1-5]|li|ul|ol|a|map|nav)$/;
+
+            // Валидация поля "cssSelector"
+            cssSelectorInput.addEventListener('input', () => {
+                const value = cssSelectorInput.value.trim();
+                if (!allowedSelectors.test(value)) {
+                    cssSelectorInput.setCustomValidity('Допустимі значення: block1, block2, block3, block4, block5, li, ul, ol, a, map, nav.');
+                } else {
+                    cssSelectorInput.setCustomValidity('');
+                }
+            });
+
             saveButton.addEventListener('click', () => {
-                const selector = form.querySelector('#cssSelector').value;
-                const property = form.querySelector('#cssProperty').value;
-                const value = form.querySelector('#cssValue').value;
+                const selector = form.querySelector('#cssSelector').value.trim();
+                const property = form.querySelector('#cssProperty').value.trim();
+                const value = form.querySelector('#cssValue').value.trim();
 
                 // Проверяем, что свойство только color или background-color
                 if (property !== 'color' && property !== 'background-color') {
@@ -210,6 +224,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Проверка на правильный формат цвета
                 if (!colorRegex.test(value)) {
                     alert('Помилка: Введіть правильний колір (наприклад, #ff0000, rgb(255, 0, 0)).');
+                    return;
+                }
+
+                // Проверяем, что значение селектора допустимо
+                if (!allowedSelectors.test(selector)) {
+                    alert('Помилка: Селектор повинен бути одним з наступних: block1, block2, block3, block4, block5, li, ul, ol, a, map, nav.');
                     return;
                 }
 
@@ -267,4 +287,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
     applySavedStyles();
 });
-

@@ -29,17 +29,18 @@
             <div id="block2" class="block">
                 <!-- Контейнер для динамічного меню -->
                 <form id="menuForm">
-                    <label for="menuTitle">Назва меню:</label>
-                    <input type="text" id="menuTitle" name="menuTitle" required>
+                    <label for="menuTitle">Назва елемента (бд):</label>
+                    <input type="text" id="menuTitle" name="menuTitle" maxlength="10" required>
                     <br>
-                    <label for="submenuItems">Підменю (через кому):</label>
-                    <input type="text" id="submenuItems" name="submenuItems" required>
+                    <label for="submenuItems">Назва елемента:</label>
+                    <input type="text" id="submenuItems" name="submenuItems" maxlength="10" required>
                     <br>
-                    <label for="links">Посилання (через кому):</label>
+                    <label for="links">Посилання:</label>
                     <input type="text" id="links" name="links" required>
                     <br>
                     <button type="submit">Додати меню</button>
                 </form>
+                
                 
             </div>
             <div class="content-container">
